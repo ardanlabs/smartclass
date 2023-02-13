@@ -1,3 +1,22 @@
+# https://ethdocs.org/en/latest/contracts-and-transactions/accessing-contracts-and-transactions.html
+# https://goethereumbook.org/smart-contract-deploy/
+# https://documenter.getpostman.com/view/4117254/ethereum-json-rpc/RVu7CT5J#dd57ef90-f990-037e-5512-4929e7280d7c
+#
+# The environment has three accounts all using this same passkey (123).
+# Geth is started with address 0x6327A38415C53FFb36c11db55Ea74cc9cB4976Fd and is used as the coinbase address.
+# The coinbase address is the account to pay mining rewards to.
+# The coinbase address is give a LOT of money to start.
+#
+# These are examples of what you can do in the attach JS environment.
+# 	eth.getBalance("0x6327A38415C53FFb36c11db55Ea74cc9cB4976Fd") or eth.getBalance(eth.coinbase)
+# 	eth.getBalance("0x8e113078adf6888b7ba84967f299f29aece24c55")
+# 	eth.getBalance("0x0070742ff6003c3e809e78d524f0fe5dcc5ba7f7")
+#   eth.sendTransaction({from:eth.coinbase, to:"0x8e113078adf6888b7ba84967f299f29aece24c55", value: web3.toWei(0.05, "ether")})
+#   eth.sendTransaction({from:eth.coinbase, to:"0x0070742ff6003c3e809e78d524f0fe5dcc5ba7f7", value: web3.toWei(0.05, "ether")})
+#   eth.blockNumber
+#   eth.getBlockByNumber(8)
+#   eth.getTransaction("0xaea41e7c13a7ea627169c74ade4d5ea86664ff1f740cd90e499f3f842656d4ad")
+#
 
 # ==============================================================================
 # Install dependencies
