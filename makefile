@@ -30,6 +30,17 @@
 #  milliether (finney)	1e15 wei	 1,000,000,000,000,000
 #  ether	            1e18 wei	 1,000,000,000,000,000,000
 #
+# Visibility Quantifiers
+# external − External functions are meant to be called by other contracts. They cannot be used for internal calls.
+# public   − Public functions/variables can be used both externally and internally. For public state variables, Solidity automatically creates a getter function.
+# internal − Internal functions/variables can only be used internally or by derived contracts.
+# private  − Private functions/variables can only be used internally and not even by derived contracts.
+#
+# Variable Location Options
+# Storage  - It is where all state variables are stored. Because state can be altered in a contract (for example, within a function), storage variables must be mutable. However, their location is persistent, and they are stored on the blockchain.
+# Memory   - Reserved for variables that are defined within the scope of a function. They only persist while a function is called, and thus are temporary variables that cannot be accessed outside this scope (ie anywhere else in your contract besides within that function). However, they are mutable within that function.
+# Calldata - Is an immutable, temporary location where function arguments are stored, and behaves mostly like memory.
+#
 
 # ==============================================================================
 # Install dependencies
