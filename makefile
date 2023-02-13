@@ -76,6 +76,10 @@ basic-deploy:
 basic-write:
 	CGO_ENABLED=0 go run app/basic/cmd/write/main.go
 
+# This will execute a simple program to test access to the smart contract API.
+basic-read:
+	CGO_ENABLED=0 go run app/basic/cmd/read/main.go
+
 # ==============================================================================
 # These commands start the Ethereum node and provide examples of attaching
 # directly with potential commands to try, and creating a new account if necessary.
