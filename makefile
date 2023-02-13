@@ -68,6 +68,10 @@ basic-build:
 	solc --bin app/basic/contract/src/basic/basic.sol -o app/basic/contract/abi/basic --overwrite
 	abigen --bin=app/basic/contract/abi/basic/Basic.bin --abi=app/basic/contract/abi/basic/Basic.abi --pkg=basic --out=app/basic/contract/go/basic/basic.go
 
+# This will deploy the smart contract to the locally running Ethereum environment.
+basic-deploy:
+	CGO_ENABLED=0 go run app/basic/cmd/deploy/main.go
+
 # ==============================================================================
 # These commands start the Ethereum node and provide examples of attaching
 # directly with potential commands to try, and creating a new account if necessary.
