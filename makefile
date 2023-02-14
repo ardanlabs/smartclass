@@ -135,6 +135,9 @@ bank-api-deploy:
 bank-proxy-deposit:
 	DEPOSIT_TARGET="account1" DEPOSIT_AMOUNT="120000" CGO_ENABLED=0 go run app/bank/proxy/cmd/deposit/main.go
 
+bank-proxy-balance:
+	BALANCE_TARGET="account1" CGO_ENABLED=0 go run app/bank/proxy/cmd/balance/main.go
+
 # Calls Bank Proxy Withdraw function
 bank-proxy-withdraw:
 	WITHDRAW_TARGET="account1" CGO_ENABLED=0 go run app/bank/proxy/cmd/withdraw/main.go
