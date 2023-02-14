@@ -85,6 +85,17 @@ basic-test:
 	go test . -v
 
 # ==============================================================================
+# These commands build, deploy, and run the bank-single smart contract.
+
+bank-single-build:
+	solc --abi app/bank/single/contract/src/bank/bank.sol -o app/bank/single/contract/abi/bank --overwrite
+	solc --bin app/bank/single/contract/src/bank/bank.sol -o app/bank/single/contract/abi/bank --overwrite
+	abigen --bin=app/bank/single/contract/abi/bank/Bank.bin --abi=app/bank/single/contract/abi/bank/Bank.abi --pkg=bank --out=app/bank/single/contract/go/bank/bank.go
+
+bank-single-deploy:
+	CGO_ENABLED=0 go run app/bank/single/cmd/deploy/main.go
+
+# ==============================================================================
 # These commands start the Ethereum node and provide examples of attaching
 # directly with potential commands to try, and creating a new account if necessary.
 
