@@ -30,7 +30,7 @@ func main() {
 func run() (err error) {
 	ctx := context.Background()
 
-	backend, err := ethereum.CreateDialedBackend(ctx, ethereum.NetworkLocalhost)
+	backend, err := ethereum.CreateDialedBackend(ctx, ethereum.NetworkHTTPLocalhost)
 	if err != nil {
 		return err
 	}
