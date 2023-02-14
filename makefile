@@ -95,6 +95,10 @@ bank-single-build:
 bank-single-deploy:
 	CGO_ENABLED=0 go run app/bank/single/cmd/deploy/main.go
 
+bank-single-test:
+	cd app/bank/single/contract/go/bank; \
+	go test . -v
+
 # ==============================================================================
 # These commands start the Ethereum node and provide examples of attaching
 # directly with potential commands to try, and creating a new account if necessary.
